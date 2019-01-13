@@ -1,5 +1,5 @@
 <?php
-if (!empty($_GET['page']) && is_file('section/' . $_GET['page'] . '.php'))
+if (!empty($_GET['page']) && is_file($_GET['page'] . '.php'))
 	$page = $_GET['page'];
 else
 	$page = 'accueil';
@@ -14,6 +14,7 @@ else
 		<div id="menu_admin">
 			<ul>
 				<li><a href="?page=accueil"><?= ($page == 'accueil' ? '<strong>Accueil</strong>' : 'Accueil') ?></a></li>
+				<li><a href="?page=contact"><?= ($page == 'contact' ? '<strong>Contact</strong>' : 'Contact') ?></a></li>
 			</ul>
 		</div>
 		<div id="content_admin">
