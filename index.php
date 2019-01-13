@@ -8,6 +8,7 @@ else
 <html lang="fr">
     <head>
         <meta charset="utf-8">
+		<title>Site web admin</title>
     </head>
     <body>
 		<div id="menu_admin">
