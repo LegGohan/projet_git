@@ -13,8 +13,9 @@ else
     <body>
 		<div id="menu_admin">
 			<ul>
-				<li><a href="?page=accueil"><?= ($page == 'accueil' ? '<strong>Accueil</strong>' : 'Accueil') ?></a></li>
-				<li><a href="?page=contact"><?= ($page == 'contact' ? '<strong>Contact</strong>' : 'Contact') ?></a></li>
+				<?php foreach (array('accueil', 'contact') as $value) { ?>
+					<li><a href="?page=<?= $value ?>"><?= ($page == $value ? '<strong>' . ucfirst($value) . '</strong>' : ucfirst($value)) ?></a></li>
+				<?php } ?>
 			</ul>
 		</div>
 		<div id="content_admin">
